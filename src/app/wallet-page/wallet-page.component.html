@@ -1,0 +1,116 @@
+<div>
+  <form #user="ngForm" (ngSubmit)="wallet(user)">
+    <div class="main">
+      <h3>Receiver's Information</h3>
+
+      <div class="address">
+
+        <div class="personal">
+          <h5>Receiver's Personal Information</h5>
+        </div>
+
+        <div class="sub-1">
+          <input
+            required
+            type="text"
+            class="fname"
+            name="firstName"
+            placeholder="Receiver's firstname"
+            ngModel
+            #firstName="ngModel"
+            pattern="[a-zA-Z]+"        
+
+          />
+       
+          <div class="val" *ngIf="isFormSubmitted && firstName.invalid && (firstName.dirty || firstName.touched)">
+            <div *ngIf="firstName.errors?.required">First name is required</div>
+            <div *ngIf="!isString(firstName.value)">First name must contain only letters.</div>
+          </div>
+            <input
+             
+              #lastName="ngModel"
+              type="text"
+              class="lname"
+              name="lastName"
+              placeholder="Receiver's lastname"
+              ngModel
+              pattern="[a-zA-Z]+"
+            />    
+          <br /><br />
+
+            <input
+            
+              #middleName="ngModel"
+              type="text"
+              class="mname"
+              name="middleName"
+              placeholder="Receiver's middlename"
+              ngModel
+              pattern="[a-zA-Z]+"
+            />       
+          <br /><br />
+
+          <input
+        
+          #middleName="ngModel"
+          type="text"
+          class="email"
+          name="email"
+          placeholder="Email address"
+          ngModel
+        />       
+      <br /><br />
+        </div>
+      </div>
+   <br>
+      <div class="bankAccountInfo">
+        <br>
+        <h4>Receiver's Bank Account Information</h4>
+      
+        <div class="bankFields">
+          <select name="text" class="bank-name" required>
+            <option value="" disabled selected>Wallat Service Provider</option>
+            <option value="first">COINS</option>
+            <option value="second">PAYTM</option>
+          </select>
+
+      <input
+      #middleName="ngModel"
+      type="number"
+      class="code"
+      name="code"
+      placeholder="Country code"
+      ngModel
+
+      />
+  <input
+  required
+  #phone="ngModel"
+  type="number"
+  class="phone"
+  name="phone"
+  placeholder="Wallet mobile number"
+  ngModel
+  pattern="\d{10}"
+  />
+
+  <div class="val" *ngIf="isFormSubmitted && !isPhoneNumberValid(phone.value) && (phone.dirty || phone.touched)">
+    <div *ngIf="phone.errors.required">Phone number is required.</div>
+    <div *ngIf="!isPhoneNumberValid(phone.value)">Phone number must have exactly 10 digits.</div>
+  </div>
+     
+        </div>
+        </div>
+    
+
+      <div class="submit">
+        <button type="submit">Continue</button>
+      </div>
+
+      <div class="cancel">
+        <button type="button" routerLink="/sendMoney">Cancel</button>
+      </div>
+    </div>
+    
+  </form>
+</div>

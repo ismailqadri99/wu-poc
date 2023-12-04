@@ -1,0 +1,146 @@
+{
+  "CurrentData": [
+    {
+      "country": "Qatar",
+      "firstName": "Ismail",
+      "type": "Mobile",
+      "code": "971",
+      "phone": "4568657323",
+      "lastName": "Qadri",
+      "id": 1
+    },
+    {
+      "country": "India",
+      "firstName": "Amit",
+      "type": "Mobile",
+      "code": "91",
+      "phone": "9876954432",
+      "lastName": "Yadav",
+      "middleName": "Kumar",
+      "id": 2
+    },
+    {
+      "country": "Dubai",
+      "firstName": "yash",
+      "type": "TelePhone",
+      "code": "45",
+      "phone": "4568657325",
+      "id": 3
+    },
+    {
+      "firstName": "Aadi",
+      "lastName": "",
+      "middleName": "",
+      "email": "",
+      "type": "",
+      "phone": "",
+      "benk": "SBI",
+      "accountNo": 1212121212,
+      "ReAccountNo": 1212121212,
+      "id": 8
+    },
+    {
+      "country": "Germany",
+      "firstName": "neymar",
+      "type": "Mobile",
+      "code": "+49",
+      "phone": "9876952967",
+      "lastName": "jr",
+      "id": 11
+    }
+  ],
+  "country": [
+    {
+      "Dubai": {
+        "isFirstNameRequired": true,
+        "isReqLastName": false,
+        "isReqMidName": true,
+        "code": "+971",
+        "exchangeValue": "3.67",
+        "currency": "DH",
+        "short": "UAE",
+        "flag": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAO4AAAB3CAMAAAAzWYybAAAANlBMVEX/AAD///8AAAAAcy8AbyV2p4R2dnalSx8AeDGlAAD/paWjSRkAdCfCbVZtrYr/qKjCTU1tfHyYe+5jAAAAv0lEQVR4nO3ayQEBUQAFwbHvhvyTlQL+gaY6glf3N03vt9uvag1ocb8+XFxc3EC4uLi4gXBxcXED4eLi4gbCxcXFDYSLi4sbCBcXFzfQCPd0Xtca4V6um1oj3HmRa4R7/PT418PFxcUNhIuLixsIFxcXNxAuLi5uIFxcXNxAuLi4uIFwcXFxA+E+3Z89b273ba0R7mGZCxcXFzcQLi4ubiBcXFzcQLi4uLiBcHFxcQPh4uLiBsLFxcUNhIv7M9wHq/SwCFi/xZgAAAAASUVORK5CYII="
+      },
+      "India": {
+        "isFirstNameRequired": true,
+        "isReqLastName": true,
+        "isReqMidName": true,
+        "code": "+91",
+        "exchangeValue": "83.5",
+        "currency": "INR",
+        "short": "IN",
+        "flag": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAACACAMAAABqWpZZAAAAhFBMVEX/Zx8Eajj/////Yg93n4YAZS//nnsAAIoAAIbd3ez6+v0GA40AAIDp6fObmsnx8fhcXKjQ0OStrdODg7lWVqUnJpVlZa1FRJ4NDIy0s9e7u9owL5TLyuSQj8B3d7KWlcaGhcGjosxzcrJQUKSiosUxMJC+vtevr81vbrVERJY3Np4oJ4xVCwLyAAAC00lEQVR4nO2ZyZKbMBBAHU0SLUYIIRYjS3gAb7H////SzEyqZi7JpYlKVf0KWwYfWk8bWnY7giAIgiAIgiAIgiAIgiAIgiAIgiAIgsiJl8zZ/cycHcucTQWMloA2W8bYTkDXrmm5ELxtXK03C7OVgOyea+b/fJ6d3CjQNgJyhHzz3h26YegOrocbMW6jsImAPwouijIoabQ2UoWygAdHv0WsDQSUK3jbaa8klLm1UB9Sed21vHAKPxq+gIqCF6MK8PP0LgAJC2osuIj4BvgCTvDqZNkViv9VsRCYeoVKuDJ7qrhw6OHQBXzBm7X0dcnY4JmHa2CsXMfR0PACvR9gC8gLL0pWQ1OZApOODQNzkoUJmtbEyoJfsMcibIFZtGNgJkKJL8Ys5nYzawo1Eg0LYytm5IDIAlLwbp05aPgeoqrk+SwrFQdmurURmY4L5CpAFoAM6uAhr2axqrfneIbL9souoKV90CCIGxFXQB7XbipLaPL2l/WNf0zTAxK4gY5cyrWLX3DnRbgCNd/HNb0utZJP38VmmprY+adU9XJl60tiz2vUkLgCTvT2rYB17L2/1ONclvNYX7zv4/tz2yO/C1AFzCKckqUbpFG2qWrI/v0OCnXVWGXk4EqpnFhQ1weoAnrPDzDIGO+W6jzE8TS3QrTzaYzDuVuch5zLAz+gdgJcgY9BFBxkfDTz1PL9nrfT3Dyi/PhjHacwY+IKFHzQNlyv19sZmO5iD4j7tN7d4HGweuAFCXyGmtBnsu/E2Q+j2b/I3qYS66ox26mEvvx7MnfEnU/TdPor2S9osl9S/m1RX2exqM9+WyX/ja38txbBIO/NXZb99jr7esBRZXjAwbI/YlrJ/JDvjbyPWf8Tu++Zs/uRObtvmUMCqSGB1JBAakggNSSQGhJIDQmkhgRSQwKpIYHUkEBqSCA1JJAaEkgNCaSGBFJDAqkhgdSQQGpIIDW/AdxZszgUq+LQAAAAAElFTkSuQmCC"
+      },
+      "Germany": {
+        "isFirstNameRequired": true,
+        "isReqLastName": true,
+        "isReqMidName": false,
+        "code": "+49",
+        "exchangeValue": "0.92",
+        "currency": "EUR",
+        "short": "GER",
+        "flag": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMUAAAB2CAMAAABPuKcZAAAAFVBMVEUAAAD/zgDdAAC4AADgAADmaAD/2ADPcfcSAAAAe0lEQVR4nO3PBxHAAAwAoXT6l1wbfyk4YAYAAAAAAACAn7k2mHuDOTew6LDosOiw6LDosOiw6LDosOiw6LDosOiw6LDosOiw6LDosOiYZ4N5N5hjA4sOiw6LDosOiw6LDosOiw6LDosOiw6LDosOiw6LDosOiw6Ljh2LDym/ZAtjCvvnAAAAAElFTkSuQmCC"
+      },
+      "Qatar": {
+        "isFirstNameRequired": true,
+        "isReqLastName": true,
+        "isReqMidName": false,
+        "code": "+974",
+        "exchangeValue": "3.64",
+        "currency": "QAR",
+        "short": "QTR",
+        "flag": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATQAAAB5CAMAAACA7i2rAAAAllBMVEWNGz3///+MFjqHAC2EACSFACf69veGACmCAB+LETiIADH28PHZv8X48/SGACuKCzV/ABDt4uTl1NjMqLCqZ3d8AADIoKmYPVSAABV9AAiXN1GnYHG2fYuTMkqNJjyweIKgWGWgUmSucH7cx8u9jZefTGK3g42RJkSjYWyPMUGMMTnVt77AlpzHp6qJHTKZSleQPkKUPkt3b9I4AAAD90lEQVR4nO2d7XaiMBBAQRCBgJqo4OeqgNgutu6+/8stoe3ZbvdXQmc4zpn7BnMPkISZzDguGCLZH35Es9nIIQecNI1cHE+H2KMmDlZaiyhv9Tny42joSL8RcGktgUqywlmPZ0MH+11gSNMIVVb5PKThDUtaS5DK5rKae0OH3B9EaW+oYuiQ+4MqLJUq2zmPv5TiGZPlos7nfvz4zpCkBWpR7a7+lMY6gCFNNPVTPpoQ2uFCG5PZ5dmZzShtbUGlpaIpvI1P6An7AM6ZrH76oUfrEXsHTlqrrbkdL96Ywnr5L5DSWlLV3M4zag8csLSWQKpm72zGhLzBS+vECVltV2uPyIuKI+3NXFI8j0j8yUWUplHZMh865P4gSxOqWQ4dcn8wjbVbkGI7iYcOuT9oxspqeXcmNFIFKMJEs/x9JZTNg/YVBKpy5n4cURGmARXWbmuX4/mExCv5GThlaVnn6zWBz/7/wEkTyUt9mYZUTgGfgZPm6kRKuVj68ym19xNUWidOlPvRKiSzcmrApXWIxfm1PXZSWUJxpGnK+pQ7HondLZ40V1de1RTO6+hlCaLZDR1yf3CVyez4ROBRQzRW7u+HUUxhGUUSJrN8TecACu9LyGQfbXwiZRwdsMJSVWa7KZmEygdwwgKZ3OqLR6K26gtw0tJmt1qN6RlzQF/PQMhmGa4oZYnfAZT2hqwOrzNitVbg0lx9Cijuh4jQvRUMaa6uH82Op+uYSCEMkjSNTF6O25DChg1RmtvdW1nwgd0YVeWP/2nDFCaaXUiiLhLJVypVtd2ERBJ6CMICWb4cnQ2hnDG0MVEuqnNErOgW1JjUd1ViSndV3gA0tv/17MQksk9fgZPmBmUxmsRkkp2fAJSmkdnufp2RSAx8AliaqwthquISkdiffQAvzdXH9ea2vIYTAsfODhRpGqmaerumsb1Fk+Z2v3KzczgdOuT+YErrEPXQIfcH0xc/aabwN80QXj1N4X2aKXwiMITPnubwXw5Lb/w/zQr+c2sH5wgs4WyULZz3tIQz7MZwLYcpXDVkCNenmcKVkKZwza0RXN1tDt8jsIBvrFjCd6Ms4Vt4tvB9T0v4ZrEdfIfdCu6WYAr35TCFO8AYwr2GzOCuVqbCuH+aIdypzwLuCWkFdx+1Fcd9bi3hjsqWcO9uO7hLvB08j8ACnnxhCM9YMfTF03wMhfHcKEN4QpkpPAvPXBlPXbSA53vawpNk7eCZxXbwdGxLeA67HalU2c55fGuo0jSqGDrk/iDqClLZXFZzb+iQ+4NlTKiyyuchjZUAQ1igkqxw1mMaxhwEaaK81efIp5EceAfWmFwcT4d4Smhf2wEnTCT7ww9Cebu//AHK5XUeZxfpdgAAAABJRU5ErkJggg=="
+      },
+      "Moracco": {
+        "isFirstNameRequired": true,
+        "isReqLastName": false,
+        "isReqMidName": false,
+        "code": "+212",
+        "exchangeValue": "10.15",
+        "currency": "MAD",
+        "short": "MRC",
+        "flag": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANUAAACOCAMAAACR172FAAAAclBMVEXBJy0AYjMAZDO2Li42XDLIIi3FJC0AZjPDJi2ERTAAaDPKIC2xMC6nNS66Ky47WzKtMS4UYjNvTDCIQy8xXzJ3SzBdUzFFWDKQQS9PWDJZVTHOHS1pUTF7SjCZPS8gYTOfOS9FXDJ/RzBVVzHWFixlUzF5eBJbAAAEu0lEQVR4nO2aC3PiOAyAYwVLJg4JIeEVaJJC+///4kmm9MHCbueue+CMvmln8mJGGsl62UmiKIqiKIqiKIqiKIqiKIqiKIqiKIry0Lh7C/A3wBzvLcJfwB/9vUX4eXDez8dnLL+k5eiM5ZItbUcXMHDWQDMbmwtiTYbqsWmVtGCgvbcQP4xLDWtl0nEtLNxkxphsMy4X3JViKih39xbkJ3EuY5XAZG5MLmg3HAHn/L+x9xblB/FbgLVfA2xHVF7gvDE0tVMyzYhqQVsDVDM7qwDq8big27PvFViwH+5HEy5c3gA8+cQ/ATT5WNTCjkw/YIJDb6gby8LCPZmJmMhNDO1HoxUYWkhI9wsyMBKtcMhMFkYxmPPVMA61di1BdSoAdxVQG1Ut6G6A2IsDhmtxwR7x1qf3VuEKeXqdoq4MDcXpeiBT1cWNL/N7q3CF6eQGPXdW7zd83d/6cHpvFX7FJR0QXIU1uXr9BYLuEUdQDot1kNpUXwS/1MN8fcBfhwfrAh9QqUT0OlQi9Lqupx+wqs3h/e7AxdP609u6XvNPoDo8qE6JqDVriBfO0np7xpUAr7v3290rQOneb71d8rKjZva4SjFYrAgMNMW54XBz7u27j/bDdtznz88q2KLhr2lVPHhmdn7Ts6BQu5OgnmvA6nNPZTnO708dMTruuwz0G//IhjrhZ1v2QnhNgy6/VBMflYZNX3lJ0XoWRdePBVcQhp4HNgHO6aLyk6qQuM93fniWzxaP7n1nWOBKvHCZIJdIUF28ZustPCZL8b5qiMD7zti0ZefKtjk+A1009W5P8Iz5MZPBexrVGAOTmmMhTRY90MUYGjcE/WLCnRbVSSTed4ZTV8+Csz0mF8MynE/EPQ31j52kroPJXsojWF3I7nAlj2Efm6FOIIbU1Uy/qOVwKpm3rzFKpRj/JJkLjviptsCjWJCeokhSV/FvK6gZ3szlcOBCURxwEq1WruCEuyjfUlciSy0kqZKrqKyIL1KckO2CDPNWgvgq94nPV1JNHHPMZDPh3uL9S3wp+zscHiTh9p3vJHhkHDxkz6eM1AU5Y512gv1MvDDbinKl1LKyS9xHevjCHwCqsFlg04VECP5bhBLJ5RXAIUpjuaQFaE9BAV+OYX5xfAkGcoW8esThyx9hBwQ4xQQsjhRsRdtT32GnAHG6IFexJpxccraTWrZ6raTe7awLp5rMZdUbB27FEVA0sEtRp+mwkwxcLa1oylFwFaEHugJCXYTpVvIVu57DYivtCXddoZaCCBOx5ehNKVe40hb3T7uwK7d7kpRVbRBTTtARHr7YyXTzpViKdcrhLL+VYQXQsniRaWdUez6CS1ibaVFKo/953IfJKuNwWBZcTUF0sd3WsqxCqbTZfemvdqHrymRhRXf4wso4RmrZdn4pup23FN5BG5lWmJehmKDllT6eGxIKb8vIDu7bTRC7Gey1pePs0IT3sUXBvQyYjsktqW0ijT7t/1eZ/isu5cDdH34zRcLkwGViE9VBXDcQVb8f9zmcVURDTFr5llb+T5EA/YramJosNJtvzGUdbkxEQdDl3xs2sxdGdbDuuyaIyFSKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoihKbPwDKYA5kP+D30gAAAAASUVORK5CYII="
+      },
+      "Iran": {
+        "isFirstNameRequired": true,
+        "isReqLastName": true,
+        "isReqMidName": true,
+        "code": "+98",
+        "exchangeValue": "42262.50",
+        "currency": "IR",
+        "short": "IR",
+        "flag": "data:image/png;base64,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"
+      },
+      "England": {
+        "isFirstNameRequired": true,
+        "isReqLastName": false,
+        "isReqMidName": true,
+        "code": "+44",
+        "exchangeValue": "0.80",
+        "currency": "GBP",
+        "short": "ENG",
+        "flag": "data:image/png;base64,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"
+      },
+      "Kuwait": {
+        "isFirstNameRequired": true,
+        "isReqLastName": true,
+        "isReqMidName": true,
+        "code": "+965",
+        "exchangeValue": "0.31",
+        "currency": "KWD",
+        "short": "KWT",
+        "flag": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPQAAAB6CAMAAAC/S45kAAAAilBMVEUAmXfOESb///8AAAAAlnLMABh6uqXYen5RUVHl5eXREScAnXoAeF3XEigAoHwAdVugDR4AknIAUT8ASjoAKSBtCRTEECRoCRNhCBI4BQoAcFcAGxUAQTIAEw8ACQcAimwmXExuspxNVVTl7OtyKC3RbnMPAQMcAgW8DyMnAweUDBshAwYxBAlYBxDnnF2KAAACeElEQVR4nO3ZiXaCMBCFYeh0Vay2Wpfa2t1u+v6v1yCVYoSQhB45czP/E/CdmCHEaHjVjYKLRrfhqYloeHXZ9lMcOIWmeT8Ka7Vp03VYOztDq50d0k+ctt0F9BPP0XTfb/tZDhYVCmaMF9E0Si6D+I3TbmEc0DQ0jUJ4Z+toWgzx1XtoVYKuLkPT9QP2GC9Fq50NPcbL0eBjvApN9wnuQKtEI396GdA0T0DnmQkNu7PNaNDv7Bq02tmA86wWnX5no7Hr0ekBDUxtg04PaG0/579mhUa7QbNE07wPpLZFQ92g2aNplHRBVtsBjXNAc0KrMQ6hdkPTYojwE3dEq5K2H7l57miAGzQPNP8/QnzQ7Me4Hzq9QWOcJ5r3DZo3mhZJ95hnDdBEj0+nLGuEPr84YpmgBS1oQQuaY4IWtKAFLWiOCVrQgha0oDkmaEELWtCC5pigBS1oQQuaY4IWtKAFLWiOCVrQFj2/tP34fjVCv76dsawBejnonfDMH30z7sVM80W/D+JO28/unSd6OuZL9kTPBj3OZi/05IPtbs7yQHPezVmu6OW0w3yZY2f0bNDhvsyxK3rK991czAXNfWjnOaBBljl2QH/yH9p5tug1DtkWrXZz2w/6n1mhb7gfwbQs0O8Q7+Zi9ehJjLXMcT169gXybi5Wg56C7eYsI/ob5QimZUKjDe28ajTrWzBzlWjet2DmKtAwH1SllaPZ34KZK0XDHcG09tFLwCOY1h56hb7M8T4aeWjn7aKxh3ZetLvM6Ls5q4AGPoJp/aHX+ANs2xatvpvbfpTD9YuG/aAqbYP+DODdXCxF4x/BtCJaId6CmYsmIRzBtH4AmZW2/XBxShoAAAAASUVORK5CYII="
+      },
+      "Bahrain": {
+        "isFirstNameRequired": true,
+        "isReqLastName": true,
+        "isReqMidName": true,
+        "code": "+973",
+        "exchangeValue": "0.38",
+        "currency": "BHD",
+        "short": "BH",
+        "flag": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAACuCAMAAAClZfCTAAAAUVBMVEXOESb////ODiTNAB/KAADMABbhiY/LAAXtu7745ebVS1XNABPMAA/MAA3hiI7NABn9+fnrsrbVRVDkk5n77/DeeoH34OHPGCvUP0vuwcPYW2R9Oqp0AAADy0lEQVR4nO2di07bQBREc9uEAgmUR6CP///QxiMhpAB1LN0Za0Z7/mCPju9uVpazqSYeHp+2u2+bRLoUnbi5Ovz4vvZ6CDQqOnF9G5hSr6IppX1aSt2KKi8lgqK0lCiKKiollqKglHiKKiUlqqIppTv7lMiKKiAlviL7qaRQVN4piRQ5pyRTVLYpKRWZpqRVVFNKh7XXvBC5oqrn3dqLXobaz83VYb/2mheiFWQ5sIV+XC9uZYIsAwIaP5ab/RsKQb4BAbof64AAWZB5QIDpxz8gwBOUEBAg+XE9A30GRVBMQKDfT1JAoFtQVkCg1U/IFnZGo6DAgECXn+PLdpsXEOhSVK/3iQ/ZRJuiin3SOhUFbvgTvYoqMaV2RXkpERRVWEocRVGnSJaiykmJqCglJaqiikiJrSggJb6ick9Josj7zVmRojJOSafIdiopFZVnSmJFU0q/zBzJFdXx/ufai16GWtDpSTMzpFXkOa+FghxH9YTKj/E9m0aQa0BA4Mf5x8cEXZB1QIDrx3MLO4MpyD8gQPMTERAgCQoJCDD85AQE+gUlBQSa/YQFBFoFxQUE+vy4H6K/pEvQ8ff2Li8g0KUo9Snb9M6ixFm9ad/RElNqVpSYUruiikuJocj6GvYjHEWVlBJNUc5ZkqioQlLiKorY4NiKyj8lgSL3lCSKyjollSLjlHSKyjUlqSLPY7dY0Yk/f80cDUWziP2MB22GMa7/z9j0Z/AMCEj82AYEBIKMAwJsP94BAa4g94AA0c+4mJ0hIiDA8eN4iP4ShqCcgEC7n4At7IxmQWEBgU4/eQGBPkGJAYEuQeNFvgtIOSl+oE9RpT5rrYoyJ3azogpMqV9RXEoMRZWVEklRUko0RRWTElNRSEpcRZWQEl2R/7FboKjMU9Iosr6qVSkq35SEilw3OKmiGh8Ku4jxubk5xkcLZ3Ac2Uo/ntN6fIZ3HpEf5x8hEkG2AQG+H9MJ9A5bkHdAgOrHPiBAFBQQEGD5yQgIcASlBAQIfoxvzz6lXVBUQKDXT1pAoFNQXkCgzc/4U9Q5xl/rXkLoczb+5nueVkUVmVK3osCNv19RpaVEUZSVEklRBaXEUxSzwTEVVUZKZEUJKdEVlX1KCkXmKWkUlXNKMkW+ZyWhojJNSasIKe3XXvNC1IpOPO/WXvQy5IKubw9rr3khWj+Wm79SkOWwFiqyDAiIBJkGBBR+fAMCfEHOAQGyH+c3Zd+gCrIPCPD8mE+gd1iCMgICFD8xAQGCoKCAQLefrIBAr6C0gECjH9eL1zm6/Dw8PgUGNPEP5RFWx/TDvDQAAAAASUVORK5CYII="
+      }
+    }
+  ]
+}

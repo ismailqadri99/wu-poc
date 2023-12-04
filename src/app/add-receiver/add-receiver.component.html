@@ -1,0 +1,154 @@
+<div>
+  <form #user="ngForm" (ngSubmit)="addReceiver(user.value)">
+    <div class="main">
+      <h3>Receiver's Information</h3>
+
+      <div class="address">
+        <h6>For your safety, make sure you know your receiver</h6>
+
+        <select
+          class="country"
+          name="country"
+          [(ngModel)]="selectedCountry"
+          (change)="CountryCode()"
+          required
+        >
+          <option hidden selected value="country">Country name</option>
+          <option *ngFor="let country of countries" [value]="country">
+            {{ country }}
+          </option>
+        </select>
+        <!-- <div class="custom-dropdown" (click)="Dropdown()">
+          <div class="selected-option" >
+            <img class="search" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAAB/CAMAAADxY+0hAAAAZlBMVEX///8AAADm5ubu7u75+fn8/PwbGxs/Pz97e3vz8/Pq6uotLS3R0dHe3t7Z2dloaGgiIiJhYWGSkpKsrKzKyso2NjYnJyeDg4OKiop1dXVRUVFMTEwRERGbm5ujo6PDw8O4uLhZWVlr/bKSAAAEjUlEQVRoge1a65aiMAweodxvAuIN5fL+L7lO0iIzw2jTxmX3HL9/etomTZMvaejHxxtvvPGfwHOdPO37XZo5kfeXRef1Ydxu7kiK4+D8JeFZV24W4Z8G99XCna69LEsHbMsheqH07OA/EI5oulcZIT99E5UEY1mU52D79W+/eoUN3Ln0JqzT2TY9Z9cVc9NcuQPCq+/Ll7WztLzIq3YaE+xYxTuTyzfX7Pe9iTSc1DwKPvG98nn/qXs71WQCNkI4Kum1zmhXDd8MLNIjZftK16JOoc6AQ3wgzZkTJilvDdnEh7SYzloeBZR4rZOfQ0i6OLCIN4nmK4MFRlhimxpN7iQXmos/2oifFOhNxfc431T8pEBsNtu5GJ+9ApLh2SgbeaWZ539BYe4CNUcAu8nnIhcKd6mZQGGBbSmRwiGO9InIHwaKf0NnFgM5phxr8R8CmPhCnQbb9zlqiJ1JLs4YfF8BYiCgbeUA22cRL/dCohHH56tfpAFKygxw2oarjE/JodRaJq6l5QixlAFpZGzygUoD4viS7w4T+7QDKPmCb7ZgpzvaA3/h7Cd0pAgA7m04r5BIAbqja47K+QtEQnHoA/fxy3QyaA4e7aq+JVwJhOJBP4O3izIQjtQlOYseckIV5HyOTXjlw54avbE5kS11ICCf64V0algxPgScqV4N0pPTta58vYQO8ov15O9etn89+8P5n3nFQ0q76Plf9ir/3+uNhfjf8sqPCfEPum54O7gUn/IS7vJDpnTdXlRBvi88RUUpwI6kak0LUADqXoIHdgISpJQOAcBy91VICeF3A7Fcf46KVlGeiPelZxBnSvknHaDlOwBgVF8/ot0tbwVaUSuKkvUGEDXUgn4gGox7NdSYywMDujWxa8dzB8A2Ns2Y2P3k+H4kux9UOq0MlF4G9pGpbBZtmJIAWpJezuPnG/tbMHbg6b0kD7zWt21CofVNvoJh39aShXPopAVGgYRfn0424rHvYVhLCfz4Z9OGxE84pmEMdYhNJYbfMFrj+YOdAih+b8GiRxsFULxvlcZDVMAgE4kRpzZ2SUQqUFBXydHzb9jaKXDAVRKaGevZK6m94fdXCWmBS6fPRK58gOFDGWH7EkV+yN+0ujSiXl/sUywkN4GdBXplyUInG/TqFVJ7O3h3j6dn5wPxedLgiRtEQ6CGIuvF+Ptip4B3nfyprX81psiqRg2bHmA5qEBjWcrk4+TPftllP31RpNVkpVvCve83TjiccPYICw70dB1yF7TwRLyrq3L+CG/84icuTrQkohvuZ/sQxfdaz204fOAGsfvl6ecdfrhgZ+UDdmEIyKsHRvDHevmUHRYiUiosP4Ddhw+e4EofMCvEFpAN13BsgOcu+6Y8dP2TlfEhiFUx8BOeiCKh2SiURGSZjCwgnZDvWSQVMUsysoDMhvZEZIoYw9BfTQGmZGShAFMyMkbMTERkSCJa3QeS9YiIMxmZAFsyaxIRS1VsAZmMLK9mFlidiOL92j6wdjJy/5FkRHwZyakAWoD3pQ8FSER87/zoCgRcTX5DiHTF3b/xxhsT/gB5Cyvntr52zAAAAABJRU5ErkJggg==" />
+            <img class="flag" *ngIf="selectedCountry && selectedCountry !== 'Select a Country'" [src]="getFlag(selectedCountry)"/>
+            {{ selectedCountry || "Select a Country" }}
+          </div>
+          <div class="dropdown-list" *ngIf="isDropdownOpen">
+            <div *ngFor="let country of countries" (click)="CountryCode()">
+              <img class="flag" [src]="getFlag(country)"/>
+              {{ country }}
+            </div>
+          </div>
+        </div> -->
+
+        <br /><br />
+
+        <div class="personal">
+          <h5>Receiver's Personal Information</h5>
+        </div>
+
+        <div class="sub-1">
+          <input
+            required
+            type="text"
+            class="fname"
+            name="firstName"
+            placeholder="Receiver's firstname"
+            ngModel
+            #firstName="ngModel"
+            pattern="[a-zA-Z]+"        
+
+          />
+          <!-- <div class="val" *ngIf="isFormSubmitted && !isString(firstName.value) && (firstName.dirty || firstName.touched)">
+            First name is required.
+          </div>  -->
+          <div class="val" *ngIf="isFormSubmitted && firstName.invalid && (firstName.dirty || firstName.touched)">
+            <div *ngIf="firstName.errors?.required">First name is required</div>
+            <div *ngIf="!isString(firstName.value)">First name must contain only letters.</div>
+          </div>
+          <br /><br />
+
+          <ng-container *ngIf="isReqLastName()">
+            <input
+              required
+              #lastName="ngModel"
+              type="text"
+              class="lname"
+              name="lastName"
+              placeholder="Receiver's lastname"
+              ngModel
+              pattern="[a-zA-Z]+"
+            />
+            <div class="val" *ngIf="isFormSubmitted && lastName.invalid && (lastName.dirty || lastName.touched)">
+              <div *ngIf="lastName.errors?.required">Last name is required</div>
+              <div *ngIf="!isString(lastName.value)">Last name must contain only letters.</div>
+            </div>  
+            </ng-container>
+          <br /><br />
+
+          <ng-container *ngIf="isReqMidName()">
+            <input
+              required
+              #middleName="ngModel"
+              type="text"
+              class="mname"
+              name="middleName"
+              placeholder="Receiver's middlename"
+              ngModel
+              pattern="[a-zA-Z]+"
+            />
+            <div class="val" *ngIf="isFormSubmitted && middleName.invalid && (middleName.dirty || middleName.touched)">
+              <div *ngIf="middleName.errors?.required">Middle name is required</div>
+              <div *ngIf="!isString(middleName.value)">Middle name must contain only letters.</div>
+            </div>
+          </ng-container>
+          <br /><br />
+        </div>
+
+        <div class="end">
+          <select name="type" #type="ngModel" ngModel required>
+            <option value="" disabled selected>Type</option>
+            <option value="Mobile">Mobile</option>
+            <option value="Telephone">Telephone</option>
+          </select>
+
+          <br /><br />
+          <!-- Country Code Input -->
+          <input
+            required
+            type="text"
+            class="code"
+            name="code"
+            placeholder="Country code"
+            [(ngModel)]="countryCodes.code"
+            #code="ngModel"
+          />
+
+          <!-- Display validation error message if the country code is not entered -->
+          <div class="val" *ngIf="code.invalid && (code.dirty || code.touched)">
+            <div *ngIf="code.errors.required">Country code is required.</div>
+          </div>
+
+          <!-- Phone Number Input -->
+          <input
+            required
+            type="text"
+            class="phone"
+            name="phone"
+            placeholder="Receiver's mobile no"
+            ngModel
+            #phone="ngModel"
+            pattern="\d{10}"
+          />
+
+          <!-- Display validation error message if the phone number is not entered -->
+          <div class="val" *ngIf="isFormSubmitted && !isPhoneNumberValid(phone.value) && (phone.dirty || phone.touched)">
+            <div *ngIf="phone.errors.required">Phone number is required.</div>
+            <div *ngIf="!isPhoneNumberValid(phone.value)">Phone number must have exactly 10 digits.</div>
+          </div>
+
+          <br /><br />
+        </div>
+      </div>
+
+      <div class="submit">
+        <button type="button" (click)="OnClick(user)">Continue</button>
+      </div>
+
+      <div class="cancel">
+        <button type="button" routerLink="/myReceiver">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>

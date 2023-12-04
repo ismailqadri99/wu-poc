@@ -1,0 +1,169 @@
+<div>
+  <form #user="ngForm" (ngSubmit)="cash(user)">
+    <div class="main">
+      <h3>Receiver's Information</h3>
+
+      <div class="">
+
+        <div class="personal">
+          <h5>Receiver's Personal Information</h5>
+        </div>
+
+        <div class="sub-1">
+          <input
+            required
+            type="text"
+            class="fname"
+            name="firstName"
+            ngModel
+            placeholder="Receiver's firstname"
+            #firstName="ngModel"
+            pattern="[a-zA-Z]+"        
+          />
+          
+          <div class="val" *ngIf="isFormSubmitted && firstName.invalid && (firstName.dirty || firstName.touched)">
+            <div *ngIf="firstName.errors?.required">First name is required</div>
+            <div *ngIf="!isString(firstName.value)">First name must contain only letters.</div>
+          </div>
+      
+      
+            <input
+              
+              #lastName="ngModel"
+              type="text"
+              class="lname"
+              name="lastName"
+              ngModel
+              placeholder="Receiver's lastname"
+              pattern="[a-zA-Z]+"
+            />
+
+            <!-- <div class="val" *ngIf="isFormSubmitted && lastName.invalid && (lastName.dirty || lastName.touched)">
+              <div *ngIf="lastName.errors?.required">Last name is required</div>
+              <div *ngIf="!isString(lastName.value)">Last name must contain only letters.</div>
+            </div>  -->
+          <br /><br />
+    
+            <input
+            
+              #middleName="ngModel"
+              type="text"
+              class="mname"
+              name="middleName"
+              placeholder="Receiver's middlename"
+              ngModel
+              pattern="[a-zA-Z]+"
+            />       
+            <!-- <div class="val" *ngIf="isFormSubmitted && middleName.invalid && (middleName.dirty || middleName.touched)">
+              <div *ngIf="middleName.errors?.required">Middle name is required</div>
+              <div *ngIf="!isString(middleName.value)">Middle name must contain only letters.</div>
+            </div> -->
+           
+          <br /><br />
+        </div>
+         
+          <input
+           
+            #street="ngModel"
+            type="text"
+            class="street"
+            name="street"
+            placeholder="Street address"
+            ngModel
+          />
+          <br /><br />
+          
+          <input
+          
+            #address="ngModel"
+            type="text"
+            class="address"
+            name="address"
+            placeholder="Address line"
+            ngModel
+          />
+        
+          <br /><br />
+          <div class="row">
+          <input
+         
+            #city="ngModel"
+            type="text"
+            class="city"
+            name="city"
+            placeholder="City"
+            ngModel
+          />
+          <br /><br />
+      
+          <input
+           
+            #middleName="ngModel"
+            type="text"
+            class="postal"
+            name="postal"
+            placeholder="Postal Code"
+            ngModel
+          />
+        </div>
+
+          <input
+         
+          #middleName="ngModel"
+          type="text"
+          class="email"
+          name="email"
+          placeholder="Email address"
+          ngModel
+        />       
+      <br /><br />
+        </div>
+
+        <div class="end">
+          <select name="type" >
+            <option disabled selected>Type</option>
+            <option value="Mobile">Mobile</option>
+            <option value="Telephone">Telephone</option>
+          </select>
+
+          <br /><br />
+          
+          <input
+           required 
+            type="text"
+            class="code"
+            name="code"
+            placeholder="Country code"
+            ngModel         
+          />
+          <input
+          
+            type="text"
+            class="phone"
+            name="phone"
+            placeholder="Receiver's mobile no"
+            ngModel
+            #phone="ngModel"
+            pattern="\d{10}"
+          />
+          <div class="val" *ngIf="isFormSubmitted && !isPhoneNumberValid(phone.value) && (phone.dirty || phone.touched)">
+            <div *ngIf="phone.errors.required">Phone number is required.</div>
+            <div *ngIf="!isPhoneNumberValid(phone.value)">Phone number must have exactly 10 digits.</div>
+          </div>
+          <br /><br />
+        </div>
+
+   <br>
+
+      <div class="submit">
+        <button type="submit">Continue</button>
+      </div>
+
+      <div class="cancel">
+        <button type="button" routerLink="/sendMoney">Cancel</button>
+      </div>
+    </div>
+
+  </form>
+</div>
+

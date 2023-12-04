@@ -1,0 +1,157 @@
+<div>
+  <form #user="ngForm" (ngSubmit)="bank(user)">
+    <div class="main">
+      <h3>Receiver's Information</h3>
+
+      <div class="address">
+
+        <div class="personal">
+          <h5>Receiver's Personal Information</h5>
+        </div>
+
+        <div class="sub-1">
+          <input
+            required
+            type="text"
+            class="fname"
+            name="firstName"
+            placeholder="Receiver's firstname"
+            ngModel
+            #firstName="ngModel"
+            pattern="[a-zA-Z]+"        
+
+          />
+              <div class="val" *ngIf="isFormSubmitted && firstName.invalid && (firstName.dirty || firstName.touched)">
+            <div *ngIf="firstName.errors?.required">First name is required</div>
+            <div *ngIf="!isString(firstName.value)">First name must contain only letters.</div>
+          </div>
+      
+       
+            <input
+            
+              #lastName="ngModel"
+              type="text"
+              class="lname"
+              name="lastName"
+              placeholder="Receiver's lastname"
+              ngModel
+              pattern="[a-zA-Z]+"
+            />
+        
+          <br /><br />
+
+    
+            <input
+         
+              #middleName="ngModel"
+              type="text"
+              class="mname"
+              name="middleName"
+              placeholder="Receiver's middlename"
+              ngModel
+              pattern="[a-zA-Z]+"
+            />       
+          <br /><br />
+
+          <input
+
+          #email="ngModel"
+          type="text"
+          class="email"
+          name="email"
+          placeholder="Email address"
+          ngModel
+        />       
+      <br /><br />
+        </div>
+
+        <div class="end">
+          <select name="type" #type="ngModel" ngModel>
+            <option value="" disabled selected>Type</option>
+            <option value="Mobile">Mobile</option>
+            <option value="Telephone">Telephone</option>
+          </select>
+
+          <br /><br />
+          <!-- Country Code Input -->
+          <input
+          
+            type="text"
+            class="code"
+            name="code"
+            placeholder="Country code"
+         
+          />
+          <input
+            type="text"
+            class="phone"
+            name="phone"
+            placeholder="Receiver's mobile no"
+            ngModel
+            #phone="ngModel"
+            pattern="\d{10}"
+          />
+          <br /><br />
+        </div>
+      </div>
+   <br>
+      <div class="bankAccountInfo">
+        <br>
+        <h4>Receiver's Bank Account Information</h4>
+      
+        <div class="bankFields">
+            <select name="benk" class="bank-name" required ngModel #benk="ngModel">
+            <option value="" disabled selected>Bank name</option>
+            <option value="SBI">SBI</option>
+            <option value="HDFC">HDFC</option>
+          </select>      
+
+      <input
+      required
+      #accountNo="ngModel"
+      type="number"
+      class="accountNo"
+      name="accountNo"
+      placeholder="Account number"
+      ngModel
+      pattern="\d{10}"
+      />
+
+      <div class="val" *ngIf="isFormSubmitted && accountNo.invalid && (accountNo.dirty || accountNo.touched)">
+        <div *ngIf="accountNo.errors.required">Account number is required.</div>
+        <div *ngIf="!isPhoneNumberValid(accountNo.value)">Account number must have exactly 10 digits.</div>
+      </div>
+  <input
+  required
+  #ReAccountNo="ngModel"
+  type="number"
+  class="ReAccountNo"
+  name="ReAccountNo"
+  placeholder="Re-Enter Account number"
+  ngModel
+  pattern="\d{10}"
+  />
+
+  <div class="val" *ngIf="isFormSubmitted && ReAccountNo.invalid && (ReAccountNo.dirty || ReAccountNo.touched)">
+    <div *ngIf="ReAccountNo.errors.required">Re-Account number is required.</div>
+    <div *ngIf="!isPhoneNumberValid(ReAccountNo.value)">Re-Account number must have exactly 10 digits.</div>
+    
+  </div>
+  
+        </div>
+        </div>
+    
+      <div class="submit">
+        <button type="submit">Continue</button>
+      </div>
+
+      <div class="cancel" >
+        <button type="button" routerLink="/sendMoney">Cancel</button>
+      </div>
+    </div>
+    
+  </form>
+</div>
+
+
+

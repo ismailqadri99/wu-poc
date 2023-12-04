@@ -1,0 +1,107 @@
+.main{
+  width: 75%;
+  background-color: white;
+  margin-bottom: 5rem;
+  margin-top: 3rem;
+  transform: translate(18%, 7%);
+  font-family:'Open Sans', sans-serif;
+}
+h3{
+  /* margin-top: 7rem; */
+  padding: 2%;
+  /* color: rgb(77, 75, 75); */
+}
+h5{
+  /* padding: 2%; */
+  margin-bottom: 5px;
+  color: rgb(77, 75, 75);
+}
+.sendname{
+  font-size: 17px;
+  margin-left: 15px;
+  margin-top: 25px;
+}
+.flagS{
+  height: 20px;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+.usa{
+  display: flex;
+
+}
+.cashtextS{
+margin-top: 6px;
+margin-left: 18px;
+font-size: 17px;
+}
+.cash{
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  padding: 2px;  
+
+}
+.payin{
+  display: flex;
+  margin-top: 25px;
+  margin-left: 1.2rem;
+}
+.both{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  padding: 2%;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.sending{
+  width:45%;
+}
+.recieving{
+  width: 45%;
+  margin-left: 5%;
+}
+.summary{
+  width:45%;
+  margin-left: 0%;
+  margin-top: 5rem;
+}
+.flagR{
+  height: 20px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.name{
+  margin-left: 80px;
+  font-size: 17px;
+  margin-top: -25px;
+}
+.cashtextR{
+  margin-top: 35px;
+  margin-left: 80px;
+  font-size: 17px;
+  }
+.amount{
+ margin-left: 9rem; 
+ } 
+.fee{
+margin-left: 10.5rem;
+  }
+.rate{
+  margin-left: 9.5rem;
+}
+.transferAmount{
+  margin-left:9rem;
+}
+.tot{
+  background-color: rgb(204, 206, 207);
+}
+.total{
+  margin-left: 14.3rem;
+}
+.tofr{
+  margin-left: 6.5rem;
+}

@@ -1,0 +1,137 @@
+<div>
+  <form #user="ngForm" >
+    <div class="main">
+      <h2>Send Money Online</h2>
+      <div class="subHead-1">
+        <h5>Your receiver's country and Send amount</h5>
+
+        <div class="custom-dropdown" (click)="Dropdown()">
+          <div class="selected-option">
+            <img class="search" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAAB/CAMAAADxY+0hAAAAZlBMVEX///8AAADm5ubu7u75+fn8/PwbGxs/Pz97e3vz8/Pq6uotLS3R0dHe3t7Z2dloaGgiIiJhYWGSkpKsrKzKyso2NjYnJyeDg4OKiop1dXVRUVFMTEwRERGbm5ujo6PDw8O4uLhZWVlr/bKSAAAEjUlEQVRoge1a65aiMAweodxvAuIN5fL+L7lO0iIzw2jTxmX3HL9/etomTZMvaejHxxtvvPGfwHOdPO37XZo5kfeXRef1Ydxu7kiK4+D8JeFZV24W4Z8G99XCna69LEsHbMsheqH07OA/EI5oulcZIT99E5UEY1mU52D79W+/eoUN3Ln0JqzT2TY9Z9cVc9NcuQPCq+/Ll7WztLzIq3YaE+xYxTuTyzfX7Pe9iTSc1DwKPvG98nn/qXs71WQCNkI4Kum1zmhXDd8MLNIjZftK16JOoc6AQ3wgzZkTJilvDdnEh7SYzloeBZR4rZOfQ0i6OLCIN4nmK4MFRlhimxpN7iQXmos/2oifFOhNxfc431T8pEBsNtu5GJ+9ApLh2SgbeaWZ539BYe4CNUcAu8nnIhcKd6mZQGGBbSmRwiGO9InIHwaKf0NnFgM5phxr8R8CmPhCnQbb9zlqiJ1JLs4YfF8BYiCgbeUA22cRL/dCohHH56tfpAFKygxw2oarjE/JodRaJq6l5QixlAFpZGzygUoD4viS7w4T+7QDKPmCb7ZgpzvaA3/h7Cd0pAgA7m04r5BIAbqja47K+QtEQnHoA/fxy3QyaA4e7aq+JVwJhOJBP4O3izIQjtQlOYseckIV5HyOTXjlw54avbE5kS11ICCf64V0algxPgScqV4N0pPTta58vYQO8ov15O9etn89+8P5n3nFQ0q76Plf9ir/3+uNhfjf8sqPCfEPum54O7gUn/IS7vJDpnTdXlRBvi88RUUpwI6kak0LUADqXoIHdgISpJQOAcBy91VICeF3A7Fcf46KVlGeiPelZxBnSvknHaDlOwBgVF8/ot0tbwVaUSuKkvUGEDXUgn4gGox7NdSYywMDujWxa8dzB8A2Ns2Y2P3k+H4kux9UOq0MlF4G9pGpbBZtmJIAWpJezuPnG/tbMHbg6b0kD7zWt21CofVNvoJh39aShXPopAVGgYRfn0424rHvYVhLCfz4Z9OGxE84pmEMdYhNJYbfMFrj+YOdAih+b8GiRxsFULxvlcZDVMAgE4kRpzZ2SUQqUFBXydHzb9jaKXDAVRKaGevZK6m94fdXCWmBS6fPRK58gOFDGWH7EkV+yN+0ujSiXl/sUywkN4GdBXplyUInG/TqFVJ7O3h3j6dn5wPxedLgiRtEQ6CGIuvF+Ptip4B3nfyprX81psiqRg2bHmA5qEBjWcrk4+TPftllP31RpNVkpVvCve83TjiccPYICw70dB1yF7TwRLyrq3L+CG/84icuTrQkohvuZ/sQxfdaz204fOAGsfvl6ecdfrhgZ+UDdmEIyKsHRvDHevmUHRYiUiosP4Ddhw+e4EofMCvEFpAN13BsgOcu+6Y8dP2TlfEhiFUx8BOeiCKh2SiURGSZjCwgnZDvWSQVMUsysoDMhvZEZIoYw9BfTQGmZGShAFMyMkbMTERkSCJa3QeS9YiIMxmZAFsyaxIRS1VsAZmMLK9mFlidiOL92j6wdjJy/5FkRHwZyakAWoD3pQ8FSER87/zoCgRcTX5DiHTF3b/xxhsT/gB5Cyvntr52zAAAAABJRU5ErkJggg==" />
+            <img class="flag" *ngIf="selectedCountry && selectedCountry !== 'Select a Country'" [src]="getFlag(selectedCountry)"/>
+            {{ selectedCountry || "Select a Country" }}
+          </div>
+          <div class="dropdown-list" *ngIf="isDropdownOpen">
+            <div *ngFor="let country of countries" (click)="fetchExchangeValue(country)">
+              <img class="flag" [src]="getFlag(country)"/>
+              {{ country }}
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-1">
+          <div class="field-one">
+            <label class="label-1">Send amount</label>
+
+            <input
+              type="number"
+              class="send"
+              name="sendAmount"
+              #sendAmount="ngModel"
+              [(ngModel)]="usdAmount"
+              placeholder="0.00"
+              (input)="SendCurrencyConverter()"
+              [value]="RconvertedAmount"             
+            />          
+            <p class="send-currency">USD</p>
+          </div>
+          <img
+            class="direction"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6HRBvobO8_D3KzmPRLpprxHq3tGNB4oBzuw&usqp=CAU"
+          />
+          <div class="field-two">
+            <label class="label-2">Receive amount</label>
+            <input
+              type="number"
+              class="receive"
+              name="receiveAmount"
+              #receiveAmount="ngModel"
+              placeholder="0.00"
+              [(ngModel)]="RecieverMoney"
+              [value]="SconvertedAmount"
+              (input)="ReceiverCurrencyConverter()"
+            />
+            <p class="receive-currency">
+              {{ currency }}
+            </p>
+          </div>
+        </div>
+
+        <div class="value" *ngIf="selectedCountry">
+          <h4>1.00 USD = {{ exchangeValue }} {{ currency }}</h4>
+        </div>
+        <br /><br />
+        <hr />
+        <br /><br />
+        <h5>How does your Receiver want the money?</h5>
+
+        <div class="payout">
+          <button
+            name="cash"
+            (click)="selectButton(1, 'Cash Pick Up')"
+            [class.selected]="recieverPayButton === 1"
+            [disabled]="!isSendClick && !isReceiveClick"
+          >
+            <img
+              class="one"
+              name="cashPic"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6MU7_a4BHtn0i2kkhyngj8Bd8SGEMhLYM2g&usqp=CAU"
+          />
+            <p>Cash pick up</p>
+          </button>
+          <button
+            name="bank"
+            (click)="selectButton(2, 'Bank Account')"
+            [class.selected]="recieverPayButton === 2"
+            [disabled]="!isSendClick && !isReceiveClick"
+          >
+            <img
+              class="two"
+              name="bank"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAeFBMVEX///8AAADX19cLCwtQUFDPz88PDw9NTU38/PzV1dX29vYEBAQcHBzz8/Pw8PCNjY0hISFmZmY5OTkXFxecnJzo6Og/Pz9GRkZ+fn7q6upXV1dfX1+VlZXJyclubm6kpKQyMjK7u7t9fX2tra0rKyszMzO+vr6QkJBaJon8AAADgElEQVR4nO2caVfyMBCF6SI7yL6IoGz6///hezyALxla22YymQD3+eapxnvLkMxNA7UaAAAAAAAAADwqcZok87W2CjbtRSf6YbXUVsJjO4jO1N+b2mLsmabRFccXbT2WNF+TyGTT19Zkw/YQ3TD+0FZVmenbrY0fZi1tZZW4rapfOvdUX19mVQ0Gxo93U1/LlfkSLNqXxeTCPNbWWILmez1DdDw3ze162jqLWB8Nxd395cK+m3MhSPrD/Bvf25n11Qi3vpqTsSGVTrWtGX3z6Ogs4mVUODl9mE4HW/8qC+lvDI057Qj9rXTqW2cR5F6PchtE8rolr0E1xaT6x5M/1DUn5vx8+PKnswA6Hw0LmpClObdFb4HUF1khPkvE2vWnWV/fAdQXWbNLBkG6/pdxLwrtospH86nZkSmH+q3Z11Z735IeWTHUm5G8+kxKU8tRp77aC1OGzdxDc2TRfCcBieQHy26DDPPnCiQBuZWJff9HX9j8nkAAWtwpqyOPG8ZgHkM9jeTsHnavEurJAtDZOUgVbdLkzORDV3Yk5+M71JMmyWXy9hnqSdva2Ti9bb2Np00jGiTc7376CfUlIjkf+VBfLpK7/z+uQ33pSM5HMtST2q3LNkRioZ7OJkPxCCQT6i0iOR/3od4ukvOhHcSBd/9oD7TyuHHjMtT3zGcEvrfSSJfdtV/pjTldYXOT5J6Z9UDXZaqzHWgmUWsJ/4fQewBwveNkvQz/VpXmI5mrUM82ovyQLHZmxKUqjg4YiQIDRrSFU2Ak96ySEtYre6N4bJ+MbH3U4nrx6P6oM7af4jSY6kp4W/4ml0H1rjgCRmBECBiBESFgBEaEgBEYEQJGYEQIGIERIWAERoSAERgRAkZgRAgYgREhYARGhIARGBECRmBECBiBESFgBEaEgBEYEQJGYESI80nNRO+KI87ngFO9K444nQOuZ5xb9XXFFXEjyTl/6+sKAAA8Ca1GEB+8SLjffNoK5qMwzOUxoA8n8RqWIOrqBK+F1FZ/DYzAiBBOjLAGYQIjzgdhAiPOB2ECI84HYQIjzgdhAiO1YHJhFpWyYji5MIsKWTGgXJhF+awYbF2dKJ8VtZUWASOh8bxGSv+BJ2BEUJMVMCKoyQoYEdRkBYwIarICRkIFRkLj+Yw8TNR9mM2HsL4xk1Ll6EBA35hJwck6AAAAAAAAAADgvvgH93o/PrC5wR8AAAAASUVORK5CYII="
+            />
+            <p>Bank Account</p>
+          </button>
+          <button
+            name="wallet"
+            (click)="selectButton(3, 'Mobile Wallet')"
+            [class.selected]="recieverPayButton === 3"
+            [disabled]="!isSendClick && !isReceiveClick"
+          >
+            <img
+              class="two"
+              name="wallet"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADgCAMAAAAt85rTAAAAe1BMVEX///8AAABPT0+FhYWzs7Pl5eXs7Ozv7+/IyMj8/PxYWFgEBARsbGysrKyNjY1eXl5mZmYdHR3m5ubc3Ny8vLzPz88pKSmtra2amprAwMBISEijo6N9fX02NjYxMTH09PQWFhbV1dVBQUEYGBhERER1dXWIiIiUlJQlJSWClHVDAAAE8UlEQVR4nO2di3KiMBSGE0UlpV5atF5oZe2u277/Ey4Bgm43WsCc4yT7f52pnU6Z5OsJISSHIAQAAAAAAAAAAAAAAAAAAAAAAAAAAAB8KPX1h+BQk9FoNC4+710REp6nizep2S0DU9Qtcpx9yhPDsFqpEqNXrZXUesXnNqgQruaVVSOYyHkggtpiOZAW7l0zV6jpD5teIRhEBNXmqWyQSWCCSpV9ZNWzXODedbwNrZcuruj5LihEvDu/LgQjqOoRSvR2NXr+ClZjls23dt4Kar3hN23TU8G60z88tomet4LxQ1s9/wQLxWgvy6t6eII6emrz0j56ngk2PUuogmJU9ixt26Z3gqtBadfRzwfBckS9fO8cO28EhcgzKXv6+SCYz7Sa/W7PZ0FVfon02s1eC/Lx90xyUZ8J3IJitejbNLvwYz8Yxrx2paDYFj3LjX4djv6YcNrpxjnoWMObWfM11KKYjNHMMK/PDAZB8dp+PO2MRD6wdTXdB50uBBO5YJpmjL/+a6nFGrYsfoJW6BovLBFcnsVsP8siWtabozy1EoYQKlFPSRRlHp/py9NEtWIiH+kLU/lPI7hlWmdXIjWCHKPXkWmeG7alEyU29xBMGQozNB13Tl9WIziiL6shNt0Mw5C0EWTqYUruIsgbQQlBV0CQAgg6BIIUQNAhEKQAgg6BIAUQdAgEKQhCUInLkzzVDW+SNIKKbsKLSvBqfVem0LM5GaopL7omOk630XpqY12thhRRzMo/WEfLA9mMCZVgtpPdeJtNSJopjeDqmspFIpdVMJAIHvqkERUsHdbBQCGoOibx1RT/ES+aqNJXgZ6rjFNXlThBEcFZv2XUctHXORSCx37hKwQH7iphoBBsneT9D54JPkxa5HaV+V2vfgrOWx8xg2BvINiD/1KwHqNcGE4HIChEGm2i8YUjAhBMq9unhX2SwnfBMjWmYp/bkgx9FxT5U/WbcjRmOQ29F5zKRlAeLEd4L9jsK1AIflhC6L2gPMN2S+S94NOZoC3F0HvBx/oWWH/LLEd4LxjXucz6m+1K6LugTrs1grMgLxNCmXngofVpCf8FhZrqCL4v7WsQAQgW5OnFFacQBMsh6KWHXUIQvAoE+wPBzqjQBU8RTH49tGPw1Ag6XwOlEKznqbsswCQeRVCZBtdB0PypF6tL6vRYREcSP9YHi5Pord/6oJQEWQgka/T9chDKBV7nhjRZFrH8a+vKFrHTd1MEDZRIUIlJ910jHlOSbCcaQV3TVfa6sF/25r9MoYP6F8dNfC237Rbukm1oy1WjAumUFEDQIRCkAIIOgSAFEHQIBCmAoEMgSAEEHQJBCiDoEAhSAEGHPIcuGHwE77uvGmcTpXg48RKcghOzQLKhL6thWRWZsOzM/V4L7jgKqzE5BwyCSjSvUmJYJzAM6oW1F47CIpOq+iEUi6M6dWxD+sKUGJvzQT5zbcB5NPuLkjxX/g87I7hn8ouarYx59ks/bfK7Z9mEfkaZNGJDnb/za/F7SMv5DhAHpnNi25TIsl9684z9jslPXynYd4LXJY6YXmyrxKTf1gw3QpEUc0HwNF5j5Dfri4nHuqPp+aaXriT1I1qcqOqVBTyGupP5jHlfLK2T4dP+GzR0Vszy+7w4ezubD8hZZLYnJIErqBuOYigDAAAAAAAAAAAAAAAAAAAAAAAAAAD8P/wBgwdE922MzYoAAAAASUVORK5CYII="
+            />
+            <p>Mobile Wallet</p>
+          </button>
+        </div>
+
+        <br /><br />
+        <hr />
+        <br /><br />
+        <h5>How would you like to pay?</h5>
+        <div class="payin">
+          <button
+            (click)="cashSelectButton(1, 'Cash PickUp')"
+            [class.selected]="cashButton === 1"
+          >
+            <img
+              class="one"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6MU7_a4BHtn0i2kkhyngj8Bd8SGEMhLYM2g&usqp=CAU"
+            />
+            <p>Cash pick up</p>
+          </button>
+        </div>
+      </div>
+      <br /><br />
+      <hr />
+      <div class="submit">
+        <button type="button" (click)="sendMoney(user.value)">Continue</button>
+      </div>
+      <div class="cancel">
+        <button type="button" routerLink="/myReceiver">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>

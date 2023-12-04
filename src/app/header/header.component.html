@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="logo">
+    <img class="wu-logo" src="assets/logo.jpg" alt="brand" />
+    <h2 routerLink="">Western Union</h2>
+  </div>
+  <ul class="nav-list" >
+   <div class="send">
+    <li *ngIf="changeSendMoney">
+      <a routerLink="sendMoney">Send Money</a>
+    </li>
+  </div>
+    <li *ngIf="changeMyReceiver">
+      <a routerLink="myReceiver">My Revceiver</a>
+    </li>
+    <li *ngIf="changeAddReceiver">
+      <a routerLink="addReceiver">Add Receiver</a>
+    </li>
+    
+    <!-- <li *ngIf="changeProfile">
+      <img
+        class="user-profile"
+        src="assets/profile.png"
+        alt="User Profile"
+      />
+    </li> -->
+    <li id="profile" *ngIf="changeLogout">
+      <div class="user-info">
+        <a href="#">Logout</a>
+      </div>
+    </li>
+  </ul>
+</div>

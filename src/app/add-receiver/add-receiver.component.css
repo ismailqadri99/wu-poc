@@ -1,0 +1,155 @@
+.main{
+  width: 75%;
+  background-color: white;
+  margin-bottom: 10px;
+  transform: translate(18%, 7%);
+  font-family:'Open Sans', sans-serif;
+}
+
+.main h3{
+  padding: 2%;
+  color: rgb(77, 75, 75);
+  /* font-weight: 10%; */
+}
+.main h6{
+  padding:0% 2% 0% 2%;
+  color: rgb(77, 75, 75);
+  margin-bottom: 10px;
+  /* font-size: medium; */
+
+}
+
+.country{
+  width: 95%;
+  height:6vh;
+  transform: translate(2.3%);
+  color: rgb(77, 75, 75);
+}
+
+.sub-1{
+width:90%;
+display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  /* position: fixed; */
+
+}
+.submit button{
+  width: 98%;
+  height: 45px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  padding: 2%;
+  background-color: #045F86;
+  color: white;
+  border: none;
+  border-radius: 2px;
+ 
+}
+
+.cancel button{
+  width: 98%;
+  height: 45px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  padding: 2%;
+  background-color: #ababac;
+  color: white;
+  border: none;
+  border-radius: 2px;
+ 
+}
+
+.personal h5{
+  font-weight: bolder;
+  margin-left: 19px;
+  margin-bottom: 2px;
+ }
+
+ .fname{
+  width: 47%;
+  height:6vh;
+  margin-left:2%;
+ }
+ .lname{
+  width: 47%;
+  height:6vh;
+  margin-left:2%;
+ }
+ .mname{
+  width:47%;
+  margin: 2% 2% 2% 2%;
+  height:6vh;
+  
+  /* margin-left: -13rem;  */
+ }
+
+ .end{
+  width:90%;
+  display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left:2%;
+
+ }
+ .code{
+  width: 20%;
+  height:6vh;
+  margin-left: 10px;
+
+ }
+ .phone{
+  width: 50%;
+  height: 6vh;
+  margin-left: 20px;
+ }
+ .val {
+  color: red;
+  font-size: 12px;
+}
+
+
+.custom-dropdown {
+  position: relative;
+  width: 95%;
+  margin-left: 1.3rem;
+  margin-top: 1rem; 
+}
+
+.selected-option {
+  position: relative;
+  padding: 10px;
+  border: 1px solid #060505;
+  cursor: pointer;
+}
+
+.dropdown-list {
+  width: 100%;
+  border: 1px solid #000000;
+}
+
+.dropdown-list div {
+  padding: 3px;
+  cursor: pointer;
+}
+
+.dropdown-list div:hover {
+  background-color: rgb(169, 167, 167);
+}
+.flag{
+  height: 20px;
+  width: 30px;
+}
+.search{
+  position: fixed;
+  margin-left: 53rem;
+  /* margin-top: 1px; */
+  margin-right: 10rem;
+  /* top: 25%; */
+  height: 22px;
+  width: 25px;
+}
